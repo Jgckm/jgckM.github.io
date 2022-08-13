@@ -3,6 +3,8 @@ title: test2
 abbrlink: 13bb8d58
 date: 2022-08-12 20:12:04
 tags:
+    - test
+    - no use file
 ---
 
 # this is test2 and no use file
