@@ -37,7 +37,7 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/jgckM || Github
-  fas fa-envelope: mailto:z3515235474@163.com || Email
+  # fas fa-envelope: mailto:z3515235474@163.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系统
