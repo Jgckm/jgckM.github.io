@@ -2,4 +2,5 @@
 title: 友链
 date: 2022-08-12 19:05:34
 type: "link"
+comments: false
 ---
