@@ -17,3 +17,15 @@ console.log(arr) // [1, 23, 4, 445, 555, 'this is test2']
 ```
 
 # hello this is no use file if you look this title please quit this page Thank you !
+
+```js
+hexo.on('deployAfter', function () {
+    console.log('start auto backup script');
+    try {
+        run_backup()
+    } catch (error) {
+        console.log(error);
+    }
+    console.log('\x1B[32mSuccessful auto backup script\x1B[0m');
+})
+```
