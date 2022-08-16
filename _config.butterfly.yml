@@ -7,6 +7,7 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
+  留言板: /messages/ || fas fa-message
   # 清单||fa fa-heartbeat:
   #   音乐: /music/ || fas fa-music
   #   照片: /Gallery/ || fas fa-images
@@ -37,7 +38,11 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/jgckM || Github
-  # fas fa-envelope: mailto:z3515235474@163.com || Email
+  # fas fa-envelope: mailto:z3515235474@163.com || Email 
+  fab fa-qq: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3515235474&website=www.oicqzone.com
+  fa fa-rss: /atom.xml || RSS链接
+
+rss: /atom.xml
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系统
@@ -316,7 +321,7 @@ valine:
   bg: # valine background
   visitor: false
   option:
-    placeholder: 昵称填写QQ可以自动获取昵称和头像，而且回复会通过QQ邮箱提醒你，快来一发吧！
+    placeholder: 昵称填写QQ可以自动获取昵称和头像，而且收到回复会通过QQ邮箱提醒你，快来一发吧！
     enableQQ: true
     master: 8f9fdfda55df02e959df0bfdae7e01d7 # 你邮箱的md5加密(百度md5 小写32位加密 在线加密)
 

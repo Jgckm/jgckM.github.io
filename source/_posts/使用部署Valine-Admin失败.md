@@ -26,7 +26,7 @@ cover: https://s1.ax1x.com/2022/08/15/vaNgAO.jpg
 
 
 
-部署用的的是[Valine-Admin](https://github.com/zhaojun1998/Valine-Admin)的仓库，后来在 **issues** 找到了，出现问题的原因
+部署用的是[Valine-Admin](https://github.com/zhaojun1998/Valine-Admin)仓库，后来在 **issues** 找到了，出现问题的原因
 
 是因为 Valine-Admin 不再支持 nodejs 11.x 版本的，直接 使用 nodejs 12.x 就可以。这里附上地址[解决方案地址](https://github.com/zhaojun1998/Valine-Admin/pull/3)
 
