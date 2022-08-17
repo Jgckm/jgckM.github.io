@@ -39,6 +39,12 @@ feed:
   autodiscovery: true
   template:
 
+lazyload:
+  enable: true
+  onlypost: true # optional
+  loadingImg: https://cdn.jsdelivr.net/gh/jgckM/image@main/loading/202208161808156.gif # optional eg ./images/loading.gif
+  isSPA: true # optional
+  preloadRatio: 3 # optional, default is 1
 
 # Directory
 source_dir: source
@@ -110,8 +116,8 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
+include: 
+exclude: 
 ignore:
 
 # Extensions
