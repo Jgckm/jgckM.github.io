@@ -100,7 +100,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://cdn.jsdelivr.net/gh/jgckM/image@main/index_img/202208171857066.jpg
+index_img: https://cdn.jsdelivr.net/gh/jgckM/image@main/index_img/202208180934390.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://cdn.jsdelivr.net/gh/jgckM/image@main/default_top_img/202208171913807.jpg
@@ -516,7 +516,7 @@ tag_ui: # 留空或 index
 # Website Background (设置网站背景)
 # can set it to color or image (可设置图片 或者 颜色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: url(/image/background_image.png)
+background: url(https://cdn.jsdelivr.net/gh/jgckM/image@main/background/202208180957090.png)
 
 # Footer Background
 footer_bg: true
@@ -537,7 +537,7 @@ canvas_ribbon:
   size: 150
   alpha: 0.6
   zIndex: -1
-  click_to_change: false
+  click_to_change: true
   mobile: false
 
 # Fluttering Ribbon (动态彩带)
