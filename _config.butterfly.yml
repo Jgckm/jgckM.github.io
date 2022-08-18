@@ -42,7 +42,6 @@ social:
   # fab fa-qq: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=3515235474&website=www.oicqzone.com
   fa fa-rss: /atom.xml || RSS链接
 
-rss: /atom.xml
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系统

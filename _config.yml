@@ -27,17 +27,9 @@ pretty_urls:
 # RSS
 # ---------------------------------------
 feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content:
-  content_limit: 140
-  content_limit_delim: ' '
-  order_by: -date
-  icon: icon.png
-  autodiscovery: true
-  template:
+    type: atom # 生成的类型，RSS对应atom
+    path: atom.xml # 生成的文件名
+    limit: 20 # 选取推送的文章数量
 
 lazyload:
   enable: true
@@ -122,6 +114,8 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+plugins:
+  - hexo-generator-feed
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
