@@ -63,7 +63,3 @@ description: Valine-Admin部署报错
 ## 为啥要填写邮箱
 
 填写邮箱后方便通知你，比如别人回复了你的评论，评论系统会发送邮件提醒你。
-
-# 🧵写在最后
-
-如果你也遇到次中情况，可以直接 frok 我的仓库[**Valine-Admin**](https://github.com/jgckM/Valine-Admin) 😜
