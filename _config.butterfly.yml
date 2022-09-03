@@ -857,6 +857,7 @@ inject:
   head:
     - <meta name="msvalidate.01" content="06A1E1CFFF6C11D2F1D98B031F22B5E8" /> # bing
     - <meta name="google-site-verification" content="1iYmcXzqnICMn2Oe9DPKAXXWwBTtaf189U_d0_HkaI0" /> # google
+    - <meta name="baidu-site-verification" content="code-mbKucxQrcS" /> # baidu
   # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
