@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jgckm.indevs.in/categories/index.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/link/index.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/messages/index.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/tags/index.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/posts/35927ff5.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/posts/b5cd49e7.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/posts/d7556a16.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jgckm.indevs.in/posts/af260385.html</loc>
     
     <lastmod>2026-02-03</lastmod>
@@ -29,52 +92,7 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/link/index.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/categories/index.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/messages/index.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/tags/index.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/posts/bc8787a6.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/posts/824ac3d0.html</loc>
+    <loc>https://jgckm.indevs.in/posts/d5217737.html</loc>
     
     <lastmod>2026-02-03</lastmod>
     
@@ -155,51 +173,6 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/posts/b5cd49e7.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/posts/35927ff5.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/posts/d7556a16.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/posts/d5217737.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/posts/e2167196.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jgckm.indevs.in/posts/10ce6d4e.html</loc>
     
     <lastmod>2026-02-03</lastmod>
@@ -237,6 +210,33 @@
   
   <url>
     <loc>https://jgckm.indevs.in/posts/33875d90.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/posts/bc8787a6.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/posts/824ac3d0.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/posts/e2167196.html</loc>
     
     <lastmod>2026-02-03</lastmod>
     
@@ -373,20 +373,6 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/tags/Pillow/</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/tags/%E5%88%87%E5%89%B2%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jgckm.indevs.in/tags/Windows/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -401,14 +387,21 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/tags/nodejs/</loc>
+    <loc>https://jgckm.indevs.in/tags/Pillow/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/tags/JAVA/</loc>
+    <loc>https://jgckm.indevs.in/tags/%E5%88%87%E5%89%B2%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/tags/nodejs/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -423,6 +416,13 @@
   
   <url>
     <loc>https://jgckm.indevs.in/tags/%E5%A4%87%E4%BB%BD/</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/tags/JAVA/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -522,14 +522,14 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/categories/JAVA/</loc>
+    <loc>https://jgckm.indevs.in/categories/%E9%A9%BE%E8%80%83/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/categories/%E9%A9%BE%E8%80%83/</loc>
+    <loc>https://jgckm.indevs.in/categories/JAVA/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
