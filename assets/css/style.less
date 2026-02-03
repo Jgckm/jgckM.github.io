@@ -1,0 +1,60 @@
+body {
+  font-family: "Microsoft YaHei", serif;
+}
+/* 正文里的 a 标签 */
+p > a {
+  padding: 0 10px;
+  transition: all 0.25s ease-out;
+  border-radius: 6px;
+  font-weight: 800;
+  &:hover {
+    color: #fff !important;
+    background-color: #00c4b6;
+  }
+}
+
+/* 隐藏锚点图标 */
+#article-container a.headerlink:after {
+  display: none;
+}
+
+/* 当前标题 */
+#aside-content #card-toc .toc-content .toc-link.active,
+/* follow me 按钮 */
+#aside-content .card-info #card-info-btn,
+/* 最新文章图片 */
+.aside-list-item .thumbnail,
+/* 上一篇 下一篇 */
+#pagination.pagination-post,
+.relatedPosts-list > div {
+  border-radius: 6px;
+}
+
+/* 最新文章 */
+.aside-list-item:hover img {
+  transform: scale(1.2);
+}
+/* 标题hover padding */
+#article-container.post-content h1,
+#article-container.post-content h2,
+#article-container.post-content h3,
+#article-container.post-content h4,
+#article-container.post-content h5,
+#article-container.post-content h6 {
+  padding-left: 0;
+  &:hover {
+    padding-left: 0;
+  }
+}
+
+/* 目录 */
+li[class^="toc-item toc-level-"] {
+  .toc-link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .toc-text {
+      white-space: nowrap;
+    }
+  }
+}
