@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jgckm.indevs.in/posts/9bbb7be6.html</loc>
+    <loc>https://jgckm.indevs.in/link/index.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/messages/index.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/tags/index.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgckm.indevs.in/categories/index.html</loc>
     
     <lastmod>2026-02-03</lastmod>
     
@@ -65,15 +92,6 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/posts/af260385.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jgckm.indevs.in/posts/d5217737.html</loc>
     
     <lastmod>2026-02-03</lastmod>
@@ -83,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/posts/35bc9194.html</loc>
+    <loc>https://jgckm.indevs.in/posts/af260385.html</loc>
     
     <lastmod>2026-02-03</lastmod>
     
@@ -101,34 +119,7 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/categories/index.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/link/index.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/messages/index.html</loc>
-    
-    <lastmod>2026-02-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/tags/index.html</loc>
+    <loc>https://jgckm.indevs.in/posts/35bc9194.html</loc>
     
     <lastmod>2026-02-03</lastmod>
     
@@ -200,6 +191,15 @@
   </url>
   
   <url>
+    <loc>https://jgckm.indevs.in/posts/68dc216d.html</loc>
+    
+    <lastmod>2026-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jgckm.indevs.in/posts/5e37b811.html</loc>
     
     <lastmod>2026-02-03</lastmod>
@@ -227,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/posts/68dc216d.html</loc>
+    <loc>https://jgckm.indevs.in/posts/9bbb7be6.html</loc>
     
     <lastmod>2026-02-03</lastmod>
     
@@ -317,6 +317,13 @@
   </url>
   
   <url>
+    <loc>https://jgckm.indevs.in/tags/SublimeText3/</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jgckm.indevs.in/tags/Blog/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -339,13 +346,6 @@
   
   <url>
     <loc>https://jgckm.indevs.in/tags/CentOS/</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/tags/SublimeText3/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -415,14 +415,14 @@
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/tags/%E7%A7%91%E7%9B%AE%E4%B8%80/</loc>
+    <loc>https://jgckm.indevs.in/tags/%E5%A4%87%E4%BB%BD/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jgckm.indevs.in/tags/%E5%A4%87%E4%BB%BD/</loc>
+    <loc>https://jgckm.indevs.in/tags/%E7%A7%91%E7%9B%AE%E4%B8%80/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -473,6 +473,13 @@
   </url>
   
   <url>
+    <loc>https://jgckm.indevs.in/categories/Notepad/</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jgckm.indevs.in/categories/Blog/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -488,13 +495,6 @@
   
   <url>
     <loc>https://jgckm.indevs.in/categories/C/</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgckm.indevs.in/categories/Notepad/</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
