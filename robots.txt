@@ -10,5 +10,5 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 
-Sitemap: http://yoursite/sitemap.xml
-Sitemap: http://yoursite/baidusitemap.xml
+Sitemap: https://jgckm.indevs.in/sitemap.xml
+Sitemap: https://jgckm.indevs.in/baidusitemap.xml
