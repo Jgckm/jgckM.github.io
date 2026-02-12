@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>CSS反向圆角 | Jgckm&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="缘由 无意中发现google浏览器标签的小圆角上面正常下面是像外侧圆角的，当时就很好奇，这是怎么实现的，于是自己就开始干了，最初方案用的是js实现的，然后搜索一下CSS也可以实现同样的效果。   🚙js 方案 监听 li 的点击事件 每次点击是首先判断 li 是否为第一个或者为最后一个 如果为第一个就没有上一个 li 所以不用圆角，反之下面的 li 就 不用圆角 通过类名的添加和删除来实现是否圆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS反向圆角">
+<meta property="og:url" content="https://jgckm.github.io/2022/08/18/CSS%E5%8F%8D%E5%90%91%E5%9C%86%E8%A7%92/index.html">
+<meta property="og:site_name" content="Jgckm&#39;s Blog">
+<meta property="og:description" content="缘由 无意中发现google浏览器标签的小圆角上面正常下面是像外侧圆角的，当时就很好奇，这是怎么实现的，于是自己就开始干了，最初方案用的是js实现的，然后搜索一下CSS也可以实现同样的效果。   🚙js 方案 监听 li 的点击事件 每次点击是首先判断 li 是否为第一个或者为最后一个 如果为第一个就没有上一个 li 所以不用圆角，反之下面的 li 就 不用圆角 通过类名的添加和删除来实现是否圆">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208190914357.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208190955284.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191011573.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191027691.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191103185.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191214713.gif">
+<meta property="article:published_time" content="2022-08-18T12:00:31.000Z">
+<meta property="article:modified_time" content="2026-02-12T10:20:27.010Z">
+<meta property="article:author" content="Jgckm">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208190914357.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Jgckm's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jgckm&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://jgckm.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-CSS反向圆角" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/18/CSS%E5%8F%8D%E5%90%91%E5%9C%86%E8%A7%92/" class="article-date">
+  <time class="dt-published" datetime="2022-08-18T12:00:31.000Z" itemprop="datePublished">2022-08-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Web/">Web</a>►<a class="article-category-link" href="/categories/Web/JavaScript/">JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS反向圆角
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h1><blockquote>
+<p>无意中发现google浏览器标签的小圆角上面正常下面是像外侧圆角的，当时就很好奇，这是怎么实现的，于是自己就开始干了，最初方案用的是js实现的，然后搜索一下CSS也可以实现同样的效果。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208190914357.png" alt="image-20220819091451236"></p>
+<h1 id="🚙js-方案"><a href="#🚙js-方案" class="headerlink" title="🚙js 方案"></a>🚙js 方案</h1><ul>
+<li>监听 li 的点击事件</li>
+<li>每次点击是首先判断 li 是否为第一个或者为最后一个 如果为第一个就没有上一个 li 所以不用圆角，反之下面的 li 就 不用圆角</li>
+<li>通过类名的添加和删除来实现是否圆角</li>
+</ul>
+<h2 id="🔎原理"><a href="#🔎原理" class="headerlink" title="🔎原理"></a>🔎原理</h2><p>就是 让当前点击的 li 的上一个 li 的右下方圆角 和 下一个 li 右上方圆角，在这个过程前要先判断是否是第一个li(因为第一个 li 没有上面没有 li )和是否是最后一个 li(因为最后一个li 下面没有 li)，这两种情况要单独操作</p>
+<ul>
+<li>如果是点击第一个(上面没有 li) 直接给下面的 li 添加圆角类名</li>
+<li>如果是点击最后一个(下面没有 li) 直接给 上面的 li 添加圆角类名</li>
+<li>其他情况 都要添加类名</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208190955284.png" alt="image-20220819095555189"></p>
+<p>这里虽然和google标签页的样式不一样，但是我感觉这种排列方式还是比较常见的</p>
+<h2 id="DOM结构"><a href="#DOM结构" class="headerlink" title="DOM结构"></a>DOM结构</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;active&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>关于我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>留言板<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>简单的DOM结构</p>
+<h2 id="CSS结构"><a href="#CSS结构" class="headerlink" title="CSS结构"></a>CSS结构</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 下圆角 */</span></span><br><span class="line"><span class="selector-class">.bottom-radius</span> &#123;</span><br><span class="line">    <span class="attribute">border-bottom-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 上圆角 */</span></span><br><span class="line"><span class="selector-class">.top-radius</span> &#123;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>美化样式</p>
+<h2 id="js-结构"><a href="#js-结构" class="headerlink" title="js 结构"></a>js 结构</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> lis = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.main li&#x27;</span>);</span><br><span class="line"><span class="comment">// 首先执行一次</span></span><br><span class="line"><span class="title function_">radiusMethod</span>();</span><br><span class="line"></span><br><span class="line">lis.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, i</span>) =&gt;</span> &#123;</span><br><span class="line">    item.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 清除 之前点击 添加的 active 类名</span></span><br><span class="line">        <span class="title class_">RemoveClassName</span>(lis);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 给点击对象添加 active 类名</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">className</span> = <span class="string">&#x27;active&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="title function_">radiusMethod</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 圆角添加类名</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">radiusMethod</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 遍历每一个li 判断 是否有 active 这个类名 </span></span><br><span class="line">    lis.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, i</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (item.<span class="property">className</span> === <span class="string">&#x27;active&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">                lis[i + <span class="number">1</span>].<span class="property">className</span> = <span class="string">&#x27;top-radius&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (lis.<span class="property">length</span> - <span class="number">1</span> === i) &#123;</span><br><span class="line">                lis[i - <span class="number">1</span>].<span class="property">className</span> = <span class="string">&#x27;bottom-radius&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                </span><br><span class="line">                lis[i + <span class="number">1</span>].<span class="property">className</span> = <span class="string">&#x27;top-radius&#x27;</span>;</span><br><span class="line">                lis[i - <span class="number">1</span>].<span class="property">className</span> = <span class="string">&#x27;bottom-radius&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 清除类名</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">RemoveClassName</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">    arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        item.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>js方案大体就是这个样子，也完美的实现了圆角</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191011573.gif" alt="GIF"></p>
+<p>我在搜索的时候看到有人使用的是CSS方案，我也试了试</p>
+<h1 id="🚄CSS-方案"><a href="#🚄CSS-方案" class="headerlink" title="🚄CSS 方案"></a>🚄CSS 方案</h1><ul>
+<li>监听 li 的点击事件</li>
+<li>点击li 添加类名 通过 CSS 的选择器来实现不同的样式,并且省去js方案的判断</li>
+</ul>
+<h2 id="🔎原理-1"><a href="#🔎原理-1" class="headerlink" title="🔎原理"></a>🔎原理</h2><ul>
+<li>当然了CSS方案肯定是不能监听点击事件的，还得是js 监听 添加 类名</li>
+<li>通过CSS 选择器 来个 当前点击的 li 来装饰样式 </li>
+<li>li 的伪类元素 负责切圆角</li>
+<li>a 的伪类元素 负责 填充空隙</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191027691.png" alt="image-20220819102704571"></p>
+<table>
+<thead>
+<tr>
+<th>颜色</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>黄色</td>
+<td>标签页</td>
+</tr>
+<tr>
+<td>红色</td>
+<td>最终想要得圆角</td>
+</tr>
+<tr>
+<td>淡蓝色(圆形)</td>
+<td>切割圆角</td>
+</tr>
+<tr>
+<td>蓝色(长方形)</td>
+<td>填充空隙</td>
+</tr>
+</tbody></table>
+<p>左右都是相同原理不再赘述</p>
+<h2 id="DOM结构-1"><a href="#DOM结构-1" class="headerlink" title="DOM结构"></a>DOM结构</h2><p>总体上只有css，js 的结构变化最大</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;active&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>关于我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>留言板<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS-结构"><a href="#CSS-结构" class="headerlink" title="CSS 结构"></a>CSS 结构</h2><h3 id="层级关系"><a href="#层级关系" class="headerlink" title="层级关系"></a>层级关系</h3><p><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191103185.png" alt="image-20220819110342099"></p>
+<p>大概是这个样子，最后在调整一下就好了，换一下颜色</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.active</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* li 的伪类选择器  */</span></span><br><span class="line"><span class="selector-class">.active</span><span class="selector-pseudo">::after</span>,</span><br><span class="line"><span class="selector-class">.active</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.active</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">border-bottom-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.active</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* a 的伪类元素 */</span></span><br><span class="line"><span class="selector-class">.active</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.active</span> <span class="selector-tag">a</span><span class="selector-pseudo">::after</span>,</span><br><span class="line"><span class="selector-class">.active</span> <span class="selector-tag">a</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#808080</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.active</span> <span class="selector-tag">a</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.active</span> <span class="selector-tag">a</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 最后一个 li和 a 不用 after */</span></span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span><span class="selector-pseudo">:last-child</span><span class="selector-class">.active</span><span class="selector-pseudo">::after</span>,<span class="selector-tag">ul</span> <span class="selector-tag">li</span><span class="selector-pseudo">:last-child</span> <span class="selector-tag">a</span><span class="selector-pseudo">::after</span>,</span><br><span class="line"><span class="comment">/* 第一个 li和 a 不用 before */</span></span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span><span class="selector-pseudo">:first-child</span><span class="selector-class">.active</span><span class="selector-pseudo">::before</span>,<span class="selector-tag">ul</span> <span class="selector-tag">li</span><span class="selector-pseudo">:first-child</span> <span class="selector-tag">a</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="js-结构-1"><a href="#js-结构-1" class="headerlink" title="js 结构"></a>js 结构</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> lis = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.main li&#x27;</span>);</span><br><span class="line">lis.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    item.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 清除 之前点击 添加的 active 类名</span></span><br><span class="line">        <span class="title class_">RemoveClassName</span>(lis);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">className</span> = <span class="string">&#x27;active&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 清除类名</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">RemoveClassName</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">    arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        item.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后感觉还是 CSS的方案更好，代码简洁更易懂。最终效果</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202208191214713.gif" alt="GIF"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jgckm.github.io/2022/08/18/CSS%E5%8F%8D%E5%90%91%E5%9C%86%E8%A7%92/" data-id="cuidd_WDtr8EYVKJ6PM-iAacF" data-title="CSS反向圆角" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/08/19/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-%E4%B8%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Linux常用命令(三)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/08/18/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Linux常用命令(二)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GIT/">GIT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JAVA/">JAVA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/Shell/">Shell</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/vim/">vim</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Notepad/">Notepad</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Vue/">Vue</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%8E%A9%E6%9C%BA/">玩机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A9%BE%E8%80%83/">驾考</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/" rel="tag">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIT/" rel="tag">GIT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pillow/" rel="tag">Pillow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/" rel="tag">Shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SublimeText3/" rel="tag">SublimeText3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%90%86/" rel="tag">代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%87%E5%89%B2%E5%9B%BE%E7%89%87/" rel="tag">切割图片</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%91%E7%9B%AE%E4%B8%80/" rel="tag">科目一</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B0%E4%BA%8B%E6%9C%AC/" rel="tag">记事本</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Blog/" style="font-size: 15px;">Blog</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CentOS/" style="font-size: 12.5px;">CentOS</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Pillow/" style="font-size: 10px;">Pillow</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/Shell/" style="font-size: 17.5px;">Shell</a> <a href="/tags/SublimeText3/" style="font-size: 10px;">SublimeText3</a> <a href="/tags/Windows/" style="font-size: 12.5px;">Windows</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 10px;">代理</a> <a href="/tags/%E5%88%87%E5%89%B2%E5%9B%BE%E7%89%87/" style="font-size: 10px;">切割图片</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 10px;">图床</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 10px;">备份</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 10px;">玩机</a> <a href="/tags/%E7%A7%91%E7%9B%AE%E4%B8%80/" style="font-size: 10px;">科目一</a> <a href="/tags/%E8%AE%B0%E4%BA%8B%E6%9C%AC/" style="font-size: 10px;">记事本</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">科目一知识点总结</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/10/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%B0%8F%E7%AE%AD%E5%A4%B4/">去除桌面小箭头</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/03/B%E7%AB%99%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E8%AE%A2%E9%98%85%E7%95%AA%E5%89%A7/">B站批量删除订阅番剧</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/04/MTKClient%E8%BF%9E%E6%8E%A5OPPO-A91-md/">MTKClient连接OPPO-A91</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/04/Python%E8%99%9A%E6%8B%9F%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">Python虚拟管理工具</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Jgckm<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
