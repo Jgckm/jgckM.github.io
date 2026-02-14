@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Git设置代理 | Jgckm's Blog</title><meta name="author" content="Jgckm"><meta name="copyright" content="Jgckm"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言Git相信大家是经常使用的东西了, 通过他来管理我们写的代码, 但是最近我同步代码时总是失败,    git clone的时候很慢有时候就会超时 于是就在 Google 的帮助下找到了解决办法特此记录一下, Git需要设置代理, 才能正常访问  Github 等网站  用到的工具 Clash For Windwos Git  Git设置代理在 Clash 中设置固定的端口, 并且关闭随机端口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git设置代理">
+<meta property="og:url" content="https://jgckm.github.io/2023/01/29/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/index.html">
+<meta property="og:site_name" content="Jgckm&#39;s Blog">
+<meta property="og:description" content="前言Git相信大家是经常使用的东西了, 通过他来管理我们写的代码, 但是最近我同步代码时总是失败,    git clone的时候很慢有时候就会超时 于是就在 Google 的帮助下找到了解决办法特此记录一下, Git需要设置代理, 才能正常访问  Github 等网站  用到的工具 Clash For Windwos Git  Git设置代理在 Clash 中设置固定的端口, 并且关闭随机端口">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202301301507372.png">
+<meta property="article:published_time" content="2023-01-29T13:07:17.000Z">
+<meta property="article:modified_time" content="2026-02-14T12:09:45.767Z">
+<meta property="article:author" content="Jgckm">
+<meta property="article:tag" content="GIT">
+<meta property="article:tag" content="代理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202301301507372.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Git设置代理",
+  "url": "https://jgckm.github.io/2023/01/29/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/",
+  "image": "https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202301301507372.png",
+  "datePublished": "2023-01-29T13:07:17.000Z",
+  "dateModified": "2026-02-14T12:09:45.767Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jgckm",
+      "url": "https://jgckm.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/51497452"><link rel="canonical" href="https://jgckm.github.io/2023/01/29/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Git设置代理',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/51497452" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202301301507372.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jgckm's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Git设置代理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Git设置代理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-29T13:07:17.000Z" title="发表于 2023-01-29 21:07:17">2023-01-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-02-14T12:09:45.767Z" title="更新于 2026-02-14 20:09:45">2026-02-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/GIT/">GIT</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Git相信大家是经常使用的东西了, 通过他来管理我们写的代码, 但是最近我同步代码时总是失败,    <code>git clone</code>的时候很慢有时候就会超时</p>
+<p>于是就在 Google 的帮助下找到了解决办法特此记录一下, Git需要设置代理, 才能正常访问  Github 等网站 </p>
+<h2 id="用到的工具"><a href="#用到的工具" class="headerlink" title="用到的工具"></a>用到的工具</h2><ul>
+<li>Clash For Windwos</li>
+<li>Git</li>
+</ul>
+<h2 id="Git设置代理"><a href="#Git设置代理" class="headerlink" title="Git设置代理"></a>Git设置代理</h2><p>在 Clash 中设置固定的端口, 并且关闭随机端口</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202301292124960.png" alt="关闭随机端口"></p>
+<h3 id="全局代理"><a href="#全局代理" class="headerlink" title="全局代理"></a>全局代理</h3><p>打开 Git 在终端输入一下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global https.proxy http://127.0.0.1:7890</span><br><span class="line">git config --global https.proxy https://127.0.0.1:7890</span><br><span class="line">git config --global http.proxy <span class="string">&#x27;socks5://127.0.0.1:7890&#x27;</span> </span><br><span class="line">git config --global https.proxy <span class="string">&#x27;socks5://127.0.0.1:7890&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>根据自己的代理类型来设置</p>
+<p><strong>注意</strong>： <code>--glboal</code> 选项指的是修改 Git 的全局配置文件 <code>~/.gitconfig</code>，而非各个 Git 仓库里的配置文件 <code>.git/config</code>。<code>protocol</code> 指的是代理的协议，如 http，https，socks5 等。<code>port</code> 则为端口号(我这里是7890)。</p>
+<h3 id="针对特定域名代理"><a href="#针对特定域名代理" class="headerlink" title="针对特定域名代理"></a>针对特定域名代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.url.proxy protocol://127.0.0.1:port</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：</p>
+<ul>
+<li>此处的 <code>url</code> 即为你需要走代理的仓库域名，<code>url</code> 以 <code>http://</code> 和 <code>https://</code> 打头的<strong>均用</strong>这个方法。</li>
+<li>网上很多中文教程，可能会告诉你 <code>https://</code> 打头的 <code>url</code> 使用“<code>git config --global https.https://example.com.proxy protocol://127.0.0.1:port</code>”，这种做法其实是错的！<strong>记住一点</strong>：Git 不认 <em><code>https.proxy</code></em> ，设置 <em>http.proxy</em> 就可以支持 https 了。</li>
+<li>如果想了解 <code>url</code> 的更多模式，如子域名等的情况，可参照 <a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-config">Git 的官方文档</a> 。网页内容搜索 <code>http.&lt;url&gt;.*</code>，即可找到相关信息。</li>
+</ul>
+<h3 id="SSH-协议代理设置"><a href="#SSH-协议代理设置" class="headerlink" title="SSH 协议代理设置"></a>SSH 协议代理设置</h3><p><code>修改 SSH 配置文件 ~/.ssh/config</code>  没有的可以新建一个</p>
+<p><code>Windows</code> SSH配置文件路径：<code>C:\Users\你的用户名\.ssh\config</code></p>
+<p><code>Linux</code> SSH配置文件路径：<code>/home/你的用户名/.ssh/config</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局</span></span><br><span class="line"><span class="comment"># ProxyCommand connect -S 127.0.0.1:1080 %h %p</span></span><br><span class="line"><span class="comment"># 只为特定域名设定</span></span><br><span class="line">Host github.com gitlab.com</span><br><span class="line">ProxyCommand connect -S 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
+
+<p><code>-S</code> 代表走<code>socks</code>代理。（<code> -H</code> 实现http和https的仓库的克隆</p>
+<h2 id="Git-取消代理"><a href="#Git-取消代理" class="headerlink" title="Git 取消代理"></a>Git 取消代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b481d2a42274">GIt设置代理</a></p>
+<p><a target="_blank" rel="noopener" href="https://ericclose.github.io/git-proxy-config.html">文让你了解如何为 Git 设置代理</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yyou33459/article/details/127651253">git设置代理</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://jgckm.github.io">Jgckm</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://jgckm.github.io/2023/01/29/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">https://jgckm.github.io/2023/01/29/Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://jgckm.github.io" target="_blank">Jgckm's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/GIT/">GIT</a><a class="post-meta__tags" href="/tags/%E4%BB%A3%E7%90%86/">代理</a></div><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202301301507372.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/02/16/Sublime%20Text3%E9%85%8D%E7%BD%AE/" title="Sublime Text3简单配置"><img class="cover" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202302162120791.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Sublime Text3简单配置</div></div><div class="info-2"><div class="info-item-1">前言因为 notepad++ 反华事件，我也决定放弃使用 notepad++ ，现在转到了 Sublime Test 3 这个编辑器颜值可以说不输 vscode，打开速度也是甩 vscode 几条街，而且还支持插件。 但是我比较喜欢干净的，sublime 每次打开都打开之前的文件，很是烦人，找了好久才找到配置项，特此记录。 关闭上次打开的文件 打开时经常打开上一次打开过的文件，很烦人。  打开 SublimeText3 找到 首选项 -&gt; 设置 一次点击  添加一下代码 12&quot;hot_exit&quot;: false,&quot;remember_open_files&quot;: false,   设置中文Shift+Ctrl+P 会弹出一个搜索框，在搜索框中输入关键字 install ,出现下拉选项，点击选择其中的：Package Control: Install Package,如图：  点击 Package Control: Install Package，需要等待一会，他会再次弹出搜索框 安装完成会弹出成功窗口   如果没弹出搜索框，在 Shift+C...</div></div></div></a><a class="pagination-related" href="/2022/12/22/%E5%88%9D%E8%AF%86JAVA/" title="初识JAVA"><img class="cover" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202212232011946.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">初识JAVA</div></div><div class="info-2"><div class="info-item-1">引言Java 是由 Sun Microsystems 公司于 1995 年 5 月推出的高级程序设计语言。 Java 可运行于多个平台，如 Windows, Mac OS 及其他多种 UNIX 版本的系统。 本教程通过简单的实例将让大家更好的了解 Java 编程语言。 移动操作系统 Android 大部分的代码采用 Java 编程语言编程。  下载JAVAJAVA下载地址传送门 配置环境变量文字教程在 Windows操作系统中配置环境变量。虽然现在新版本自动配置环境变量了，但是还是推荐自己配置一下环境变量。 此计算机右键属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt; 找到系统变量的 path 点进去 -&gt; 删除安装JAVA自动配置的环境变量 -&gt; 在环境变量中新建 -&gt; 变量名 JAVA_HOME 变量值 配置你安装Java的路径(这里不要有bin目录) 设置好了点击 确定-&gt;  来到 系统变量 找到 path 点进去 -&gt; 点击 新建 -&gt; 直接填写 %JAVA_HOME\bin% -&gt; 就此一路确定 即可。 图文教程...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/51497452" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jgckm</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/jgckm" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E5%88%B0%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="toc-number">2.</span> <span class="toc-text">用到的工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">Git设置代理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">全局代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E7%89%B9%E5%AE%9A%E5%9F%9F%E5%90%8D%E4%BB%A3%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">针对特定域名代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH-%E5%8D%8F%E8%AE%AE%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.3.</span> <span class="toc-text">SSH 协议代理设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-%E5%8F%96%E6%B6%88%E4%BB%A3%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">Git 取消代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" title="科目一知识点总结"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141713433.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="科目一知识点总结"/></a><div class="content"><a class="title" href="/2023/11/14/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" title="科目一知识点总结">科目一知识点总结</a><time datetime="2023-11-14T08:44:21.000Z" title="发表于 2023-11-14 16:44:21">2023-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/10/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%B0%8F%E7%AE%AD%E5%A4%B4/" title="去除桌面小箭头"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141716838.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="去除桌面小箭头"/></a><div class="content"><a class="title" href="/2023/11/10/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%B0%8F%E7%AE%AD%E5%A4%B4/" title="去除桌面小箭头">去除桌面小箭头</a><time datetime="2023-11-10T15:42:44.000Z" title="发表于 2023-11-10 23:42:44">2023-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/03/B%E7%AB%99%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E8%AE%A2%E9%98%85%E7%95%AA%E5%89%A7/" title="B站批量删除订阅番剧"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141807995.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="B站批量删除订阅番剧"/></a><div class="content"><a class="title" href="/2023/10/03/B%E7%AB%99%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E8%AE%A2%E9%98%85%E7%95%AA%E5%89%A7/" title="B站批量删除订阅番剧">B站批量删除订阅番剧</a><time datetime="2023-10-03T13:02:27.000Z" title="发表于 2023-10-03 21:02:27">2023-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/04/MTKClient%E8%BF%9E%E6%8E%A5OPPO-A91-md/" title="MTKClient连接OPPO-A91"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141809483.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MTKClient连接OPPO-A91"/></a><div class="content"><a class="title" href="/2023/07/04/MTKClient%E8%BF%9E%E6%8E%A5OPPO-A91-md/" title="MTKClient连接OPPO-A91">MTKClient连接OPPO-A91</a><time datetime="2023-07-04T01:35:02.000Z" title="发表于 2023-07-04 09:35:02">2023-07-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/04/Python%E8%99%9A%E6%8B%9F%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="Python虚拟管理工具">Python虚拟管理工具</a><time datetime="2023-07-04T01:16:41.000Z" title="发表于 2023-07-04 09:16:41">2023-07-04</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Jgckm</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

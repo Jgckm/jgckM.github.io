@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Jgckm's Blog</title><meta name="author" content="Jgckm"><meta name="copyright" content="Jgckm"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Jgckm&#39;s Blog">
+<meta property="og:url" content="https://jgckm.github.io/page/2/index.html">
+<meta property="og:site_name" content="Jgckm&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/51497452">
+<meta property="article:author" content="Jgckm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/51497452"><script type="application/ld+json"></script><link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/51497452"><link rel="canonical" href="https://jgckm.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Jgckm\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://avatars.githubusercontent.com/u/51497452" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jgckm's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Jgckm's Blog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/jgckm" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/12/18/%E4%BD%BF%E7%94%A8Notepad-%E6%9B%BF%E6%8D%A2Windows%E8%AE%B0%E4%BA%8B%E6%9C%AC/" title="使用Notepad++替换Windows记事本"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/image/202212181107365.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Notepad++替换Windows记事本"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/18/%E4%BD%BF%E7%94%A8Notepad-%E6%9B%BF%E6%8D%A2Windows%E8%AE%B0%E4%BA%8B%E6%9C%AC/" title="使用Notepad++替换Windows记事本">使用Notepad++替换Windows记事本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-12-18T03:05:20.000Z" title="发表于 2022-12-18 11:05:20">2022-12-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Windows/">Windows</a></span></div><div class="content"> 因 notepad++带有政治色彩，使用软件必须同意才可以，我是不喜欢为什么要这样，已经弃了，也请大家擦亮眼睛  Windows自带的的 notepad 实在是难用(一言难尽,收起小尾巴)，而notepad++是业界知名度非常好用的文本编辑器。 默认使用 notepad++ 打开.txt文本文件这种很常见，只需要在选中 .txt 右键 打开方式 选择 notepad++  在勾选上始终使用此程序打开 .txt 文件，确定即可。 这种方式比较自由 既可以用 notepad++ 打开也可以选择 系统的记事本打开。 其他的程序默认弹出记事本打开，想使用notepad++ 代替记事本使用这种方法后系统记事本将被 notepad++ 接管，记事本打开后是 notepad++ 程序，但是系统记事本就无法被打开了（一般不会使用系统记事本来看代码，推荐使用 notepad++ 来查看代码，轻量编辑代码） 使用命令替换系统记事本 使用系统管理员身份打开命令提示符   运行以下命令 32位 notepad++： 1reg add &quot;HKLM\Software\Microsoft\Wind...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/08/30/vue%E6%89%93%E5%8C%85%E5%90%8E%E5%BC%95%E5%85%A5js%E5%92%8Ccss%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E5%85%A5/" title="vue打包后引入js和css用相对路径引入"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208301502698.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue打包后引入js和css用相对路径引入"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/30/vue%E6%89%93%E5%8C%85%E5%90%8E%E5%BC%95%E5%85%A5js%E5%92%8Ccss%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E5%85%A5/" title="vue打包后引入js和css用相对路径引入">vue打包后引入js和css用相对路径引入</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-30T07:00:05.000Z" title="发表于 2022-08-30 15:00:05">2022-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web/">Web</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web/Vue/">Vue</a></span></div><div class="content">✨前言今天使用Vue打包后上传至Github Pages 静态托管，一打开白屏啥都没有  白茫茫一片啥都没有。（哎，这啥情况😑） 🔎寻找问题接着 F12看来一下  红了一大片，显示资源没找到？我接着又回去找源文件看了才发现问题，特此记录  在打包生成的文件 index.html找到问题所在   所有静态资源都用的是绝对路径使用绝对路径直接导致资源无法找到  这样资源肯定是找不到的，所以得用相对路径 ⚙解决问题绝对路径行不通那就相对路径 在项目中找到 vue.config.js文件配置  添加如下代码：(这里有坑往下看) 1234module.exports = &#123;  publicPath: &quot;././&quot;,  outputDir: &quot;dist&quot;,&#125;;  最后重新打包即可看到页面内容了 1npm run build  🛹踩坑这之后，我又开始在本地环境跑，Github Pages 上面跑的好好的，但是在本地环境运行不了呢 前前后后整了2个多小时，才找到答案 1234module.exports = &#123;  pub...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/08/22/shell%E5%85%A5%E9%97%A8/" title="shell入门"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/3f878fc75ad84405bffa29a309238655.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="shell入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/22/shell%E5%85%A5%E9%97%A8/" title="shell入门">shell入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-22T06:19:43.000Z" title="发表于 2022-08-22 14:19:43">2022-08-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/Shell/">Shell</a></span></div><div class="content"> Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。 Shell 是指一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。 Ken Thompson 的 sh 是第一种 Unix Shell，Windows Explorer 是一个典型的图形界面 Shell。  脚本以 #!/bin/bash 开头(指定解析器)  执行方式     命令 描述    [bash&#x2F;sh] [绝对路径或者相对路径] 执行脚本    采用 bash 或 sh 脚本的相对路径或者绝对路径(不用赋予脚本+x权限)  1bash hello.sh   直接写出相对路径或者是绝对路径(这种方式必须需要权限才可以)  1/root/scripts/hello.sh  变量常用系统变量$HOME、$PWD、$SHELL、$USER等 如果想要看全局变量  1234567envprintenvprintenv USER # 获取 USER 全局变量set # 包含了所有的全局变量  自定义变量语法 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/08/19/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-%E4%B8%89/" title="Linux常用命令(三)"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208211511367.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux常用命令(三)"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/19/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-%E4%B8%89/" title="Linux常用命令(三)">Linux常用命令(三)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-19T05:17:52.000Z" title="发表于 2022-08-19 13:17:52">2022-08-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/Shell/">Shell</a></span></div><div class="content">压缩和解压类gzip &#x2F; gunzip 压缩   命令 描述    gzip [文件] 压缩 [文件] 只能将文件压缩为*.gz文件   gunzip [文件.gz] 解压缩文件命令   经验技巧  只能压缩文件，不能压缩目录  不保留原来的文件 同时多个文件会产生多个压缩包   zip &#x2F; unzip 压缩可以保留源文件    命令 描述    zip -r [压缩的名字.zip] [路径] -r 压缩目录   unzip -d [解压目录] [文件名.zip] -d 指定目录   tar 打包功能： 打包目录，压缩后的文件格式.ta    命令 描述    -c 产生打包文件   -v 显示.tar打包信息   -f 指定压缩后的文件名   -z 打包同时压缩   -x 解包.tar 文件   -c 解压到指定的目录   常用命令组合  压缩  tar -zcvf temp.tar.gz initial-setup-ks.cfg info 公共&#x2F;  -zcvf 是参数  temp.tar.gz 是打包后的名称  initial-setup-ks....</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/08/18/CSS%E5%8F%8D%E5%90%91%E5%9C%86%E8%A7%92/" title="CSS反向圆角"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208191300246.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CSS反向圆角"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/18/CSS%E5%8F%8D%E5%90%91%E5%9C%86%E8%A7%92/" title="CSS反向圆角">CSS反向圆角</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-18T12:00:31.000Z" title="发表于 2022-08-18 20:00:31">2022-08-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web/">Web</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web/JavaScript/">JavaScript</a></span></div><div class="content">缘由 无意中发现google浏览器标签的小圆角上面正常下面是像外侧圆角的，当时就很好奇，这是怎么实现的，于是自己就开始干了，最初方案用的是js实现的，然后搜索一下CSS也可以实现同样的效果。   🚙js 方案 监听 li 的点击事件 每次点击是首先判断 li 是否为第一个或者为最后一个 如果为第一个就没有上一个 li 所以不用圆角，反之下面的 li 就 不用圆角 通过类名的添加和删除来实现是否圆角  🔎原理就是 让当前点击的 li 的上一个 li 的右下方圆角 和 下一个 li 右上方圆角，在这个过程前要先判断是否是第一个li(因为第一个 li 没有上面没有 li )和是否是最后一个 li(因为最后一个li 下面没有 li)，这两种情况要单独操作  如果是点击第一个(上面没有 li) 直接给下面的 li 添加圆角类名 如果是点击最后一个(下面没有 li) 直接给 上面的 li 添加圆角类名 其他情况 都要添加类名   这里虽然和google标签页的样式不一样，但是我感觉这种排列方式还是比较常见的 DOM结构12345678&lt;div class=&quot;main&qu...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/08/18/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/" title="Linux常用命令(二)"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208211841371.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux常用命令(二)"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/18/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/" title="Linux常用命令(二)">Linux常用命令(二)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-18T02:14:33.000Z" title="发表于 2022-08-18 10:14:33">2022-08-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/Shell/">Shell</a></span></div><div class="content">接着上一篇，继续肝 事件日期类date 设置系统时间   命令 描述    date 直接数出  时间信息  如：2022年 08月 18日 星期四 10:20:30 CST   date +%Y 显示当前年份   date+%m 显示当前月份   date+%d 显示当前月的第几天数   date “+%Y-%m-%d %H:%M:%S” 输出 年月日时分秒   date +%s 当前秒数时间戳   date -d “1 days ago” 返回前一天的时间 (1可以自定义)   date -d “-2 hours ago” 返回两小时后的时间(-2可以自定义)   date -s “2017-06-19 20:52:15” 将系统时间设为 2017-06-19 20:52:15   hwclock -s 通过硬件配置系统时间   ntpdate ntp1.aliyun.com 联网 同步时间  (阿里云服务)   cal 查看日历   命令 描述    cal 当前做在的月份日历   cal -1, –one 只显示当前月份(默认)   cal -3, –three 显示上个...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/08/17/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%B8%80)/" title="Linux常用命令(一)"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208172049842.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux常用命令(一)"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/17/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%B8%80)/" title="Linux常用命令(一)">Linux常用命令(一)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-17T01:58:57.000Z" title="发表于 2022-08-17 09:58:57">2022-08-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/Shell/">Shell</a></span></div><div class="content">常用基本命令 Shell 可以看做是命令解释器，为我们提供交互式的文本控制台界面。我们可以通过终端控制台来输入命令，有Shell来进行解析并最终交给内核执行。  帮助命令man 获取帮助信息   命令 功能描述    man [命令或配置文件] 获取帮助信息   help 获的 shell 内置命令的帮助信息 一部分基础功能的系统命令是直接内嵌在shell中的，系统加载或会随着shell一起加载，常驻系统内存中。这部分命令被称“内置”(built-in)命令，相应的其他命令被称为“外部命令”  可以通过 type [命令或配置文件] 来查看是否是内置命令  man -f [命令或配置文件]      命令 功能命令    help 获取shell内置命令的帮助信息   常用快捷键   常用快捷键 功能    ctrl+c 停止进程   ctrl+l 清屏 相当于 clear彻底清屏是 reset   善用tab键 提示  防止敲错   上下键 查找使用过的命令   文件目录pwd 显示当前工作目录的绝对路径 pwd : print working directory 打印工作目录...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/08/16/centos7%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81ip/" title="Centos7修改静态ip"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208170851827.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Centos7修改静态ip"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/16/centos7%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81ip/" title="Centos7修改静态ip">Centos7修改静态ip</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-16T10:34:56.000Z" title="发表于 2022-08-16 18:34:56">2022-08-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span></div><div class="content">  来一发linux 修改静态ip的记录 要配置和电脑主机在同一ip网段下方便链接   ⚙打开终端vim /etc/sysconfig/network-scripts/ifcfg-ens33进入编辑页面 123456789101112131415TYPE=&quot;Ethernet&quot;PROXY_METHOD=&quot;none&quot;BROWSER_ONLY=&quot;no&quot;BOOTPROTO=&quot;dhcp&quot;DEFROUTE=&quot;yes&quot;IPV4_FAILURE_FATAL=&quot;no&quot;IPV6INIT=&quot;yes&quot;IPV6_AUTOCONF=&quot;yes&quot;IPV6_DEFROUTE=&quot;yes&quot;IPV6_FAILURE_FATAL=&quot;no&quot;IPV6_ADDR_GEN_MODE=&quot;stable-privacy&quot;NAME=&quot;ens33&quot;UUID=&quot;03da8ded-3662-437...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/08/16/vim%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="vim的基本使用"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208170847517.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vim的基本使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/16/vim%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="vim的基本使用">vim的基本使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-16T02:41:42.000Z" title="发表于 2022-08-16 10:41:42">2022-08-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/vim/">vim</a></span></div><div class="content">Vim编辑器 vim 是 linux 系统中自带的编辑器，被称为**编辑器之神** 它的前身是 vi ，历史悠久，熟练的使用vim 有非常非常高效的效率  Vim 有三种模式  一般模式 编辑模式(插入模式)  命令模式  一般模式  用vim直接打开文件，就会自动进入一般模式(默认模式)  常用指令复制   语法 功能描述    yy 复制当前行   数字yy 复制一段(从光标当前行向后n行)   y$ 从当前光标位置复制到行的最后   y^ 从当前光标位置复制到行的最前面   yw 复制当前单词   p 粘贴   删除   语法 功能描述    dd 删除行   数字dd 删除n行(向后删除)   d^ 删除从当前光标位置到行头   d$ 删除从当前光标位置到行尾   dw 删除当前单词   剪切   语法 功能描述    x 剪切当前光标位置的(单个字符)   X 剪切光标之前的(单个字符)   替换   语法 功能描述    r 替换当前光标的字符   其他   语法 功能描述    w 移动到下一个词(单词开头)   e 移动到词尾   gg 光标移动到整片文档的开头 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/08/15/Typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E5%9B%BE%E5%BA%8A/" title="Typora配置图片自动上传到图床"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202208151720690.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora配置图片自动上传到图床"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/15/Typora%E9%85%8D%E7%BD%AE%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E5%9B%BE%E5%BA%8A/" title="Typora配置图片自动上传到图床">Typora配置图片自动上传到图床</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-15T03:13:54.000Z" title="发表于 2022-08-15 11:13:54">2022-08-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Blog/">Blog</a></span></div><div class="content">✨前言 因为写博客的时候图片需要手动的插入，实在是麻烦，这种繁琐重复的事，很是让人烦。所以就打算作个图床，一开始用gitee对国内友好点，可是他好像不是为人民服务的那种，各种的反链，恶心。最终选择用github+jsdelivr 搭建  🥟使用的工具 PicGo 是一款优秀的图床上传工具 可以快速上传图片到图床的工具  Typora markdown编辑器  github 用于存储图片  github-plus PicGo 里面的插件 可以删除图片和同步仓库，而自带的版本不能删除    这边使用PicGo+github来实现markdown图床   🍭下载进入PicGo 的github下载页面  这里根据自己系统选择，我是win版。下载后无脑安装 成功安装界面  🍿创建github仓库然后初始化仓库（省略） 🌭配置PicGo在PicGo找到 图床设置 找到 github图床 token创建 点击setting  进入设置界面看做下脚  下面就是点击Personal access tokens &#x3D;&gt; Generate new token 生成token并且复...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/51497452" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jgckm</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/jgckm" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" title="科目一知识点总结"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141713433.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="科目一知识点总结"/></a><div class="content"><a class="title" href="/2023/11/14/%E7%A7%91%E7%9B%AE%E4%B8%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" title="科目一知识点总结">科目一知识点总结</a><time datetime="2023-11-14T08:44:21.000Z" title="发表于 2023-11-14 16:44:21">2023-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/10/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%B0%8F%E7%AE%AD%E5%A4%B4/" title="去除桌面小箭头"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141716838.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="去除桌面小箭头"/></a><div class="content"><a class="title" href="/2023/11/10/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%B0%8F%E7%AE%AD%E5%A4%B4/" title="去除桌面小箭头">去除桌面小箭头</a><time datetime="2023-11-10T15:42:44.000Z" title="发表于 2023-11-10 23:42:44">2023-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/03/B%E7%AB%99%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E8%AE%A2%E9%98%85%E7%95%AA%E5%89%A7/" title="B站批量删除订阅番剧"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141807995.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="B站批量删除订阅番剧"/></a><div class="content"><a class="title" href="/2023/10/03/B%E7%AB%99%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E8%AE%A2%E9%98%85%E7%95%AA%E5%89%A7/" title="B站批量删除订阅番剧">B站批量删除订阅番剧</a><time datetime="2023-10-03T13:02:27.000Z" title="发表于 2023-10-03 21:02:27">2023-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/04/MTKClient%E8%BF%9E%E6%8E%A5OPPO-A91-md/" title="MTKClient连接OPPO-A91"><img src="https://cdn.jsdelivr.net/gh/jgckM/image@main/cover/202311141809483.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MTKClient连接OPPO-A91"/></a><div class="content"><a class="title" href="/2023/07/04/MTKClient%E8%BF%9E%E6%8E%A5OPPO-A91-md/" title="MTKClient连接OPPO-A91">MTKClient连接OPPO-A91</a><time datetime="2023-07-04T01:35:02.000Z" title="发表于 2023-07-04 09:35:02">2023-07-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/04/Python%E8%99%9A%E6%8B%9F%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="Python虚拟管理工具">Python虚拟管理工具</a><time datetime="2023-07-04T01:16:41.000Z" title="发表于 2023-07-04 09:16:41">2023-07-04</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Blog/"><span class="card-category-list-name">Blog</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C/"><span class="card-category-list-name">C</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/GIT/"><span class="card-category-list-name">GIT</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JAVA/"><span class="card-category-list-name">JAVA</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">7</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/Shell/"><span class="card-category-list-name">Shell</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/vim/"><span class="card-category-list-name">vim</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Notepad/"><span class="card-category-list-name">Notepad</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/HTML/" style="font-size: 1.1em; color: #999">HTML</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: #999">图床</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 1.1em; color: #999">备份</a> <a href="/tags/CSS/" style="font-size: 1.1em; color: #999">CSS</a> <a href="/tags/C/" style="font-size: 1.1em; color: #999">C</a> <a href="/tags/%E5%88%87%E5%89%B2%E5%9B%BE%E7%89%87/" style="font-size: 1.1em; color: #999">切割图片</a> <a href="/tags/nodejs/" style="font-size: 1.1em; color: #999">nodejs</a> <a href="/tags/GIT/" style="font-size: 1.1em; color: #999">GIT</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 1.1em; color: #999">代理</a> <a href="/tags/%E7%A7%91%E7%9B%AE%E4%B8%80/" style="font-size: 1.1em; color: #999">科目一</a> <a href="/tags/Windows/" style="font-size: 1.2em; color: #999da3">Windows</a> <a href="/tags/Linux/" style="font-size: 1.5em; color: #99a9bf">Linux</a> <a href="/tags/JavaScript/" style="font-size: 1.3em; color: #99a1ac">JavaScript</a> <a href="/tags/Blog/" style="font-size: 1.3em; color: #99a1ac">Blog</a> <a href="/tags/JAVA/" style="font-size: 1.1em; color: #999">JAVA</a> <a href="/tags/Python/" style="font-size: 1.2em; color: #999da3">Python</a> <a href="/tags/CentOS/" style="font-size: 1.2em; color: #999da3">CentOS</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 1.1em; color: #999">玩机</a> <a href="/tags/Github/" style="font-size: 1.1em; color: #999">Github</a> <a href="/tags/%E8%AE%B0%E4%BA%8B%E6%9C%AC/" style="font-size: 1.1em; color: #999">记事本</a> <a href="/tags/SublimeText3/" style="font-size: 1.1em; color: #999">SublimeText3</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/Pillow/" style="font-size: 1.1em; color: #999">Pillow</a> <a href="/tags/Shell/" style="font-size: 1.4em; color: #99a5b6">Shell</a> <a href="/tags/vim/" style="font-size: 1.1em; color: #999">vim</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/10/">
+            <span class="card-archive-list-date">
+              十月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/07/">
+            <span class="card-archive-list-date">
+              七月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/02/">
+            <span class="card-archive-list-date">
+              二月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/01/">
+            <span class="card-archive-list-date">
+              一月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/12/">
+            <span class="card-archive-list-date">
+              十二月 2022
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/08/">
+            <span class="card-archive-list-date">
+              八月 2022
+            </span>
+            <span class="card-archive-list-count">12</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">23</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-02-14T12:10:14.847Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Jgckm</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
